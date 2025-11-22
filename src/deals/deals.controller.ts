@@ -1,13 +1,13 @@
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Patch,
-  Param,
+  Controller,
   Delete,
-  UseGuards,
+  Get,
+  Param,
+  Patch,
+  Post,
   Query,
+  UseGuards,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { DealsService } from './deals.service';
@@ -48,3 +48,4 @@ export class DealsController {
   searchDeals(@Query('keyword') keyword: string) {
     return this.dealsService.searchDeals(keyword);
   }
+}

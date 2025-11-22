@@ -1,11 +1,11 @@
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Patch,
-  Param,
+  Controller,
   Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
   Query,
 } from '@nestjs/common';
 import { CustomersService } from './customers.service';
@@ -48,4 +48,4 @@ export class CustomersController {
   searchCustomers(@Query('keyword') keyword: string) {
     return this.customersService.searchCustomers(keyword);
   }
-
+}
